@@ -11,15 +11,14 @@
 
 <body>
     <main class="page">
-        <div class="container py-5">
-            <div class="row g-4">
+        <article>
+            <div class="container py-5">
+                <div class="row g-4">
 
-                <!-- Seção de produtos -->
-                <section class="products col-lg-8" aria-labelledby="products-title">
-                    <h2 id="products-title" class="products__title">Desserts</h2>
+                    <!-- Products section -->
+                        <h2 id="products-title" class="products__title">Desserts</h2>
 
-                    <div class="row g-4">
-                        <article class="product col-md-4">
+                        <div class="product col-md-4">
                             <figure class="product__card card border-0 shadow-sm h-100">
                                 <img src="./assets/images/image-waffle-desktop.jpg"
                                     class="product__image card-img-top rounded-3" alt="Waffle with berries">
@@ -33,46 +32,47 @@
                                     </button>
                                 </figcaption>
                             </figure>
-                        </article>
-                        <!-- Outras sobremesas aqui -->
-                    </div>
-                </section>
-
-                <!-- Carrinho lateral -->
-                <aside class="cart col-lg-4" aria-label="Shopping cart">
-                    <section class="cart__box card border-0 shadow-sm p-4">
-                        <h2 class="cart__title fw-semibold mb-4">Your Cart (7)</h2>
-
-                        <ul class="cart__list list-unstyled mb-3">
-                            <li class="cart__item d-flex justify-content-between small mb-2">
-                                <span class="cart__item-name">Classic Tiramisu</span>
-                                <data class="cart__item-price" value="5.50">$5.50</data>
-                            </li>
-                            <li class="cart__item d-flex justify-content-between small mb-2">
-                                <span class="cart__item-name">Vanilla Bean Crème Brûlée</span>
-                                <data class="cart__item-price" value="7.00">$7.00</data>
-                            </li>
-                        </ul>
-
-                        <div class="cart__total border-top pt-3 mb-3">
-                            <div class="d-flex justify-content-between fw-semibold">
-                                <span>Total</span>
-                                <data class="cart__total-value" value="46.50">$46.50</data>
-                            </div>
                         </div>
 
-                        <p class="cart__info text-center small text-success mb-3">
-                            ✅ This is a carbon-neutral delivery
-                        </p>
-
-                        <button class="cart__button btn btn-primary w-100">Confirm Order</button>
                     </section>
-                </aside>
+                </div>
+            </div></article>
+            
+        <!-- Cart right -->
+        <aside class="cart col-lg-4" aria-label="Shopping cart">
+            <section class="cart__box card border-0 shadow-sm p-4">
+                <h2 class="cart__title fw-semibold mb-4">Your Cart (7)</h2>
 
-            </div>
-        </div>
+                <ul class="cart__list list-unstyled mb-3">
+                    <li class="cart__item d-flex justify-content-between small mb-2">
+                        <span class="cart__item-name">Classic Tiramisu</span>
+                        <data class="cart__item-price" value="5.50">$5.50</data>
+                    </li>
+                    <li class="cart__item d-flex justify-content-between small mb-2">
+                        <span class="cart__item-name">Vanilla Bean Crème Brûlée</span>
+                        <data class="cart__item-price" value="7.00">$7.00</data>
+                    </li>
+                </ul>
+
+                <div class="cart__total border-top pt-3 mb-3">
+                    <div class="d-flex justify-content-between fw-semibold">
+                        <span>Total</span>
+                        <data class="cart__total-value" value="46.50">$46.50</data>
+                    </div>
+                </div>
+
+                <p class="cart__info text-center small text-success mb-3">
+                    ✅ This is a carbon-neutral delivery
+                </p>
+
+                <button class="cart__button btn btn-primary w-100">Confirm Order</button>
+            </section>
+        </aside>
+
+
+
     </main>
-
+    <!-- Start Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./javascript/script.js"></script>
 </body>
