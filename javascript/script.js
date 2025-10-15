@@ -1,6 +1,6 @@
 const rowProducts = document.querySelector('.row');
 const cardTemplate = document.querySelector('.product');
-
+const price = document.querySelector('.data');
 // Remove o card inicial do HTML, para não duplicar
 cardTemplate.remove();
 
@@ -17,6 +17,7 @@ async function loading() {
 
         cardClone.querySelector('h3').textContent = e.name;
         cardClone.querySelector('p').textContent = e.name;
+        cardClone.querySelector('data').textContent = e.price.toFixed(2);
 
         rowProducts.appendChild(cardClone);
     });
