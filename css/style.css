@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    clear: both;
+    padding: 0 10px;
+
+}
+/* Estrutura BEM e layout base */
+
+.page {
+  background-color: #f8f9fa;
+}
+
+/* ===== Produtos ===== */
+.products__title {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.product__card {
+  transition: transform 0.2s ease;
+}
+
+.product__card:hover {
+  transform: translateY(-4px);
+}
+
+.product__image {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.product__name {
+  color: #333;
+}
+
+.product__price {
+  color: #d35400;
+}
+
+.product__button {
+  border-radius: 8px;
+}
+
+/* ===== Carrinho ===== */
+.cart__box {
+  background-color: #fff;
+}
+
+.cart__title {
+  font-size: 1.25rem;
+}
+
+.cart__item {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.cart__total-value {
+  color: #111;
+}
+
+.cart__button {
+  background-color: #d35400;
+  border: none;
+}
+
+.cart__button:hover {
+  background-color: #c34400;
+}
