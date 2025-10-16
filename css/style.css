@@ -1,8 +1,9 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 article {
   width: 70%;
   margin: 0 auto;
@@ -10,20 +11,22 @@ article {
 }
 
 aside {
-  width: 27.5%!important;
+  width: 27.5% !important;
   float: right;
-  margin: 0 auto;;
+  margin: 0 auto;
+  ;
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 980px;
-    margin: 0 auto;
-    clear: both;
-    padding: 0 10px;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  clear: both;
+  padding: 0 10px;
 
 }
-/* Estrutura BEM e layout base */
+
+/* Estrutura BEM e layout base products */
 
 .page {
   background-color: #f8f9fa;
@@ -60,6 +63,8 @@ aside {
   border-radius: 8px;
 }
 
+/* End products */
+
 /* ===== Carrinho ===== */
 .cart__box {
   background-color: #fff;
@@ -73,11 +78,18 @@ aside {
 .cart__item {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 0.5rem;
-    display: flex;
-  justify-content: space-between; /* nome à esquerda, preço à direita */
+  display: flex;
+  justify-content: space-between;
+  /* nome à esquerda, preço à direita */
   margin-bottom: 0.5rem;
+  align-items: center;
 }
 
+.cart__item-image {
+  width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
 .cart__total-value {
   color: #111;
 }
@@ -90,16 +102,62 @@ aside {
 .cart__button:hover {
   background-color: #c34400;
 }
+
 .cart__item-remove {
   cursor: pointer;
-    text-decoration: none;
-    color: red;
-    border: 1px solid red;
-    padding: 0px 5px 1px 5px;
-    border-radius: 3px;
-    font-weight: bold;
+  text-decoration: none;
+  color: red;
+  border: 1px solid red;
+  padding: 4px 6px 1px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+
 }
+
 .cart__item-remove:hover {
   background-color: red;
   color: #fff;
 }
+
+/* ===== End Carrinho ===== */
+
+/* lightbox */
+.lightbox {
+  display: none;
+  /* Oculto por padrão */
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox__content {
+    position: relative;
+    max-width: 40%;
+    margin: 5% auto;
+    text-align: center;
+    background: #fff;
+    padding: 25px;
+}
+
+.lightbox__image {
+  width: 100%;
+  height: auto;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* END LIGHTBOX */
