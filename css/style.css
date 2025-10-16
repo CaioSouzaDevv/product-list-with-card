@@ -63,6 +63,7 @@ aside {
 /* ===== Carrinho ===== */
 .cart__box {
   background-color: #fff;
+  margin-top: 70px;
 }
 
 .cart__title {
@@ -72,6 +73,9 @@ aside {
 .cart__item {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 0.5rem;
+    display: flex;
+  justify-content: space-between; /* nome à esquerda, preço à direita */
+  margin-bottom: 0.5rem;
 }
 
 .cart__total-value {
