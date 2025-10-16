@@ -4,6 +4,8 @@ const cardTemplate = document.querySelector('.product');
 const price = document.querySelector('.data');
 
 const listCar = document.querySelector('.cart__list');
+let total = 0;
+let totalCar = document.querySelector('.cart__total-value');
 // Remove o card inicial do HTML, para não duplicar
 cardTemplate.remove();
 
@@ -38,15 +40,34 @@ async function loading() {
             itemPrice.classList.add('cart__item-price');
             itemPrice.textContent = `$${e.price.toFixed(2)}`;
 
-            // Adiciona os dois elementos no li
+
+
+            const removeItem = document.createElement('a');
+            removeItem.title = 'Clique para remover';
+            removeItem.classList.add('cart__item-remove');
+            removeItem.textContent = 'x';
+
+            // Adiciona elementos no li
             listInCart.appendChild(itemName);
             listInCart.appendChild(itemPrice);
+            listInCart.appendChild(removeItem);
 
-            // Adiciona o li na lista
             listCar.appendChild(listInCart);
 
+            total += Number.parseFloat(e.price);
 
+            totalCar.textContent = total.toFixed(2);
+
+            // Lógica para remover os <li> do carrinho
+            removeItem.addEventListener('click', function () {
+                listInCart.remove();
+
+
+            })
         });
+
+
+
 
     });
 

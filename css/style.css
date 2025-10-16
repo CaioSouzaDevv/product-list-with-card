@@ -90,3 +90,16 @@ aside {
 .cart__button:hover {
   background-color: #c34400;
 }
+.cart__item-remove {
+  cursor: pointer;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    padding: 0px 5px 1px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.cart__item-remove:hover {
+  background-color: red;
+  color: #fff;
+}
